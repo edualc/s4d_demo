@@ -2,12 +2,14 @@ FROM ufoym/deepo:all-jupyter-py36
 RUN pip install --upgrade pip 
 RUN pip install pandas==0.21.1
 
-RUN apt-get update && apt-get install -y libasound-dev \
+RUN apt-get update
+RUN apt-get install -y libasound-dev \
    portaudio19-dev \
    libportaudio2 \
    libportaudiocpp0 \
-   libavcodec-extra \
-   libglpk-dev
+xy
+   libav-tools \
+   libavcodec-extra
 
 RUN pip install PyAudio==0.2.11
 RUN pip install ecyglpki==0.2.0
@@ -20,4 +22,3 @@ RUN pip install sidekit==1.2.3
 RUN pip install six==1.11.0
 RUN pip install scikit_learn==0.19.1
 RUN pip install sortedcontainers==1.5.9
-RUN pip install s4d
